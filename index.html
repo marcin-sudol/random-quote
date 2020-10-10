@@ -55,30 +55,41 @@
 
     <main class="min-vh-100 d-flex justify-content-center align-items-center">
 
-        <div class="card bg-light shadow m-3" style="max-width: 500px;">
+        <div id="quote-box" class="card bg-light shadow m-3 p-sm-3" style="max-width: 600px;">
 
             <div class="card-body">
 
-                <blockquote id="quote-box" class="blockquote">
+                <blockquote class="blockquote mb-sm-4">
+
                     <p id="text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptas.
                     </p>
-                    <footer id="author" class="blockquote-footer d-flex align-items-center">
-                        <span class="mr-auto text-primary">Author</span>
-                        <button type="button" class="btn btn-primary px-2 py-1"><i class="fab fa-twitter"></i></button>
+                    <footer class="blockquote-footer d-flex align-items-center">
+                        <span id="author" class="mr-auto text-primary">
+                            Author
+                        </span>
+                        <a href="https://twitter.com/intent/tweet" target="_blank" id="tweet-quote"
+                            class="btn btn-primary px-2 py-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     </footer>
 
                 </blockquote>
 
                 <hr />
 
-                <button type="button" class="btn btn-outline-success d-block mx-auto px-4 py-2">Next quote</button>
+                <button type="button" id="new-quote" class="btn btn-outline-success d-block mx-auto mt-sm-4 px-4 py-2"
+                    onclick="console.log('change quote!')">
+                    New quote
+                </button>
             </div>
         </div>
 
     </main>
 
-
+    <script>
+        const myFun = () => console.log('change quote!');
+    </script>
 
 
 
@@ -97,25 +108,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-
-
-
-    <!-- REACT -->
-    <!-- DEVELOPMENT -->
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
-
-    <!-- PRODUCTION
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/prop-types@15.6/prop-types.min.js"></script>
-    -->
-
-    <!-- REDUX -->
-    <script src="https://unpkg.com/redux/dist/redux.min.js"></script>
-    <script src="https://unpkg.com/redux-thunk/dist/redux-thunk.min.js"></script>
-    <script src="https://unpkg.com/react-redux/dist/react-redux.min.js"></script>
 
 
 
