@@ -3,36 +3,80 @@
 
 <head>
 
+
+
     <!-- TECHNICAL METATAGS -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+
 
     <!-- BOOTSTRAP CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+
 
     <!-- FONTAWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
 
-    <!-- LOCAL CSS -->
-    <link rel="stylesheet" href="main.css">
+
+
+    <!-- LOCAL CSS
+  <link rel="stylesheet" href="main.css" />
+  -->
+
+
 
     <!-- PAGE METATAGS -->
-    <meta name="author" content="Marcin Sudoł">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="author" content="Marcin Sudoł" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-    <title>Title</title>
+
+    <!-- <style>
+        * {
+            border: 1px solid black;
+        }
+    </style> -->
+
+
+    <title>Random Quote Generator</title>
 
 </head>
 
 
 
+
+
 <body>
 
-    <div id="content"></div>
+    <main class="min-vh-100 d-flex justify-content-center align-items-center">
+
+        <div class="card bg-light shadow m-3" style="max-width: 500px;">
+
+            <div class="card-body">
+
+                <blockquote id="quote-box" class="blockquote">
+                    <p id="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptas.
+                    </p>
+                    <footer id="author" class="blockquote-footer d-flex align-items-center">
+                        <span class="mr-auto text-primary">Author</span>
+                        <button type="button" class="btn btn-primary px-2 py-1"><i class="fab fa-twitter"></i></button>
+                    </footer>
+
+                </blockquote>
+
+                <hr />
+
+                <button type="button" class="btn btn-outline-success d-block mx-auto px-4 py-2">Next quote</button>
+            </div>
+        </div>
+
+    </main>
 
 
 
@@ -68,8 +112,6 @@
     <script src="https://unpkg.com/prop-types@15.6/prop-types.min.js"></script>
     -->
 
-
-
     <!-- REDUX -->
     <script src="https://unpkg.com/redux/dist/redux.min.js"></script>
     <script src="https://unpkg.com/redux-thunk/dist/redux-thunk.min.js"></script>
@@ -89,11 +131,11 @@
     </script>
      -->
 
-
-
     <!-- MY SCRIPTS
     <script src="script.js"></script>
     -->
+
+
 
 </body>
 
