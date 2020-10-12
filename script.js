@@ -57,7 +57,6 @@ const newQuoteIndex = (index) => {
 
 // INITIAL VALUES
 let index = newQuoteIndex(-1);
-const href = $('#tweet-quote').attr('href');
 $('#text').text(quotes[index].quote);
 $('#author').text(quotes[index].author);
 
@@ -67,19 +66,13 @@ $('#author').text(quotes[index].author);
 $(document).ready(() => {
     $('#new-quote').click(() => {
 
-        $('#tweet-quote').removeAttr('href');
-
         $('#quote').fadeOut('slow', () => {
 
             index = newQuoteIndex(index);
             $('#text').text(quotes[index].quote);
             $('#author').text(quotes[index].author);
 
-            $('#quote').fadeIn('slow', () => {
-
-                $('#tweet-quote').attr('href', href);
-
-            });
+            $('#quote').fadeIn('slow');
         });
     });
 });
