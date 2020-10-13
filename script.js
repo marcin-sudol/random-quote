@@ -44,10 +44,12 @@ const quotes = [
 
 
 
-// GET INDEX FOR NEW QUOTE
-const newQuoteIndex = (index) => {
-    let newIndex = index;
-    while (newIndex === index) {
+
+
+// RETURN INDEX FOR NEW QUOTE
+const newQuoteIndex = (currentIndex) => {
+    let newIndex = currentIndex;
+    while (newIndex === currentIndex) {
         newIndex = Math.floor(Math.random() * quotes.length);
     }
     return newIndex;
@@ -55,23 +57,21 @@ const newQuoteIndex = (index) => {
 
 
 
-// INITIAL VALUES
-let index = newQuoteIndex(-1);
-$('#text').text(quotes[index].quote);
-$('#author').text(quotes[index].author);
 
 
-
-// CHANGE QUOTE
 $(document).ready(() => {
+
+    // INITIAL QUOTE
+    let index = newQuoteIndex(-1);
+    $('#text').text(quotes[index].quote);
+    $('#author').text(quotes[index].author);
+
+    // CHANGE QUOTE ON CLICK
     $('#new-quote').click(() => {
-
         $('#quote').fadeOut('slow', () => {
-
             index = newQuoteIndex(index);
             $('#text').text(quotes[index].quote);
             $('#author').text(quotes[index].author);
-
             $('#quote').fadeIn('slow');
         });
     });
